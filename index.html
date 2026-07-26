@@ -1,149 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastor James Whitfield Christian Resources</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<title>Pastor James Whitfield Christian Resources</title>
+    body {
+      background: #111827;
+      color: #f3f4f6;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+    }
 
-<style>
+    header {
+      background: #1f2937;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 1px solid #374151;
+    }
 
-body{
-background:#111827;
-color:white;
-font-family:Arial,Helvetica,sans-serif;
-margin:0;
-}
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
 
-header{
-background:#1f2937;
-padding:30px;
-text-align:center;
-}
+    header p {
+      margin: 0;
+      color: #9ca3af;
+      font-size: 1.1rem;
+    }
 
-h1{
-margin:0;
-font-size:42px;
-}
+    nav {
+      background: #374151;
+      padding: 14px 20px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-nav{
-background:#374151;
-padding:15px;
-text-align:center;
-}
+    nav a {
+      color: #f3f4f6;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:20px;
-font-weight:bold;
-}
+    nav a:hover {
+      background: #4b5563;
+    }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:40px;
-}
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-.quoteBox{
-background:#1f2937;
-padding:30px;
-border-radius:10px;
-font-size:22px;
-line-height:1.6;
-margin-top:30px;
-}
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
 
-button{
-padding:15px 25px;
-font-size:18px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-margin-top:20px;
-}
+    .quoteBox {
+      background: #1f2937;
+      padding: 28px;
+      border-radius: 12px;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      min-height: 120px;
+      border: 1px solid #374151;
+    }
 
-footer{
-margin-top:60px;
-padding:20px;
-text-align:center;
-background:#1f2937;
-}
+    button {
+      background: #2563eb;
+      color: white;
+      padding: 14px 28px;
+      font-size: 1.05rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
 
-</style>
+    button:hover {
+      background: #1d4ed8;
+    }
 
+    footer {
+      margin-top: 80px;
+      padding: 24px;
+      text-align: center;
+      background: #1f2937;
+      color: #9ca3af;
+      font-size: 0.95rem;
+      border-top: 1px solid #374151;
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
+  <header>
+    <h1>Pastor James Whitfield Christian Resources</h1>
+    <p>Historical Christian Sources • Church Fathers • Councils</p>
+  </header>
 
-<h1>Pastor James Whitfield Christian Resources</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/christianitywow/">ChristianityWow!</a>
+    <a href="#">Articles</a>
+    <a href="#">Quotes</a>
+    <a href="#">Search</a>
+  </nav>
 
-<p>Historical Christian Sources • Church Fathers • Councils</p>
+  <div class="container">
+    <h2>🎲 Church Father Roulette</h2>
 
-</header>
+    <div class="quoteBox" id="quote">
+      Click the button to begin.
+    </div>
 
-<nav>
+    <button onclick="randomQuote()">Random Quote</button>
+  </div>
 
-<a href="#">Home</a>
+  <footer>
+    Website under construction
+  </footer>
 
-<a href="#">Articles</a>
+  <script>
+    const quotes = [
+      "Tertullian: 'What indeed has Athens to do with Jerusalem?'",
+      "Origen: 'The Scriptures have a spiritual meaning beyond the literal.'",
+      "Augustine: 'Our hearts are restless until they rest in You.'",
+      "John Chrysostom: 'Prayer is the root, the fountain, the mother of a thousand blessings.'"
+    ];
 
-<a href="#">Quotes</a>
-
-<a href="#">Search</a>
-
-</nav>
-
-<div class="container">
-
-<h2>🎲 Church Father Roulette</h2>
-
-<div class="quoteBox" id="quote">
-
-Click the button to begin.
-
-</div>
-
-<button onclick="randomQuote()">
-
-Random Quote
-
-</button>
-
-</div>
-
-<footer>
-
-Website under construction
-
-</footer>
-
-<script>
-
-const quotes=[
-
-"Tertullian: 'What indeed has Athens to do with Jerusalem?'",
-
-"Origen: 'The Scriptures have a spiritual meaning beyond the literal.'",
-
-"Augustine: 'Our hearts are restless until they rest in You.'",
-
-"John Chrysostom: 'Prayer is the root, the fountain, the mother of a thousand blessings.'"
-
-];
-
-function randomQuote(){
-
-const q=quotes[Math.floor(Math.random()*quotes.length)];
-
-document.getElementById("quote").innerHTML=q;
-
-}
-
-</script>
+    function randomQuote() {
+      const q = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerHTML = q;
+    }
+  </script>
 
 </body>
-
 </html>
