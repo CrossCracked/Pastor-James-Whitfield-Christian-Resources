@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChristianityWow! | Pastor James Whitfield</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #d6e0ea 0%, #e8eef4 40%, #f4f7fa 100%);
+      font-family: Georgia, "Times New Roman", serif;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px 60px;
+    }
+
+    .top-section {
+      text-align: center;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .decorative-line {
+      font-size: 1.3rem;
+      color: #4a5568;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .name {
+      font-size: 1.1rem;
+      color: #2d3748;
+      margin-bottom: 15px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #4a5568;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .main-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .main-title h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      color: #1a202c;
+      margin-bottom: 6px;
+    }
+
+    .main-title .greek {
+      font-size: 1.4rem;
+      color: #2d3748;
+    }
+
+    .roulette-box {
+      background: #ffffffcc;
+      border: 1px solid #cbd5e0;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .roulette-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #2d3748;
+    }
+
+    .roulette-box .sub {
+      font-size: 1.05rem;
+      color: #4a5568;
+      margin-bottom: 20px;
+    }
+
+    .quoteBox {
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 24px;
+      min-height: 110px;
+      font-size: 1.2rem;
+      line-height: 1.65;
+      margin-bottom: 22px;
+      color: #2d3748;
+    }
+
+    button.random-btn {
+      background: #4a6fa5;
+      color: white;
+      border: none;
+      padding: 13px 32px;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button.random-btn:hover {
+      background: #3b5b8a;
+    }
+
+    .bottom-section {
+      text-align: center;
+      margin-top: 50px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .decorative-bottom {
+      font-size: 1.5rem;
+      color: #718096;
+      margin-bottom: 20px;
+      opacity: 0.85;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: #2d3748;
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .socials a:hover {
+      background: #4a5568;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-section">
+    <div class="decorative-line">✝ ──────────────── ✝</div>
+    <div class="name">Pastor James Whitfield</div>
+    <a href="/" class="back-link">← Back to Home</a>
+  </div>
+
+  <div class="main-title">
+    <h1>ChristianityWow!</h1>
+    <div class="greek">Χριστιανισμός Ουάου!</div>
+  </div>
+
+  <div class="roulette-box">
+    <h2>🎲 Church Father Roulette</h2>
+    <div class="sub">Ρουλέτα Πατέρων της Εκκλησίας</div>
+    
+    <div class="quoteBox" id="quote">
+      Click the button to begin.
+    </div>
+    
+    <button class="random-btn" onclick="randomQuote()">Random Quote</button>
+  </div>
+
+  <div class="bottom-section">
+    <div class="decorative-bottom">Soli Deo Gloria</div>
+    <div class="socials">
+      <a href="https://x.com/crosscracked2" target="_blank">𝕏</a>
+      <a href="https://youtube.com/@YOURCHANNEL" target="_blank">▶</a>
+    </div>
+  </div>
+
+  <script>
+    const quotes = [
+      "Tertullian: 'What indeed has Athens to do with Jerusalem?'",
+      "Origen: 'The Scriptures have a spiritual meaning beyond the literal.'",
+      "Augustine: 'Our hearts are restless until they rest in You.'",
+      "John Chrysostom: 'Prayer is the root, the fountain, the mother of a thousand blessings.'"
+    ];
+
+    function randomQuote() {
+      const q = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerHTML = q;
+    }
+  </script>
+
+</body>
+</html>
